@@ -1,23 +1,264 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ivan Ryabov | Software Engineer</title>
-  <style>
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #0b1220; color: #f8fafc; font-family: system-ui, sans-serif; }
-    main { max-width: 650px; padding: 32px; }
-    h1 { font-size: clamp(38px, 7vw, 64px); margin-bottom: 8px; }
-    p { color: #aab7cc; line-height: 1.7; }
-    span { color: #7dd3fc; }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b111a">
+  <meta name="description" content="Ivan Ryabov’s engineering portfolio. Backend architecture, secure file storage, release coordination, authorization, and AI security projects.">
+  <link rel="canonical" href="https://ryabov.is-a.dev/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Ivan Ryabov | Backend Engineering &amp; Software Architecture">
+  <meta property="og:description" content="Projects in backend engineering, software architecture, and security by Ivan Ryabov.">
+  <meta property="og:url" content="https://ryabov.is-a.dev/">
+  <meta property="og:image" content="https://ryabov.is-a.dev/assets/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ivan Ryabov, Senior Backend Engineer and Software Architect">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Ivan Ryabov | Backend Engineering &amp; Software Architecture</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-  <main>
-    <p>SOFTWARE ENGINEER · JAVA · CLOUD</p>
-    <h1>Ivan <span>Ryabov.</span></h1>
-    <p>Backend development, distributed systems, cybersecurity and cloud-native architecture.</p>
-    <p>Building and exploring Java, Go, Kubernetes and DevOps.</p>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#top"><span class="monogram" aria-hidden="true">IR</span> Ivan Ryabov</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="header-github" href="https://github.com/iriabov5">GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow hero-role">Senior Backend Engineer / Software Architect</p>
+        <h1 id="hero-title">Ivan Ryabov<span>.</span></h1>
+        <p class="hero-description">I build backend systems and design how they store data, coordinate work, and enforce access.</p>
+        <p class="hero-stack">Java &amp; Kotlin · Go · Security Engineering · Distributed Systems</p>
+        <div class="actions">
+          <a class="button primary" href="#projects">Explore projects <span aria-hidden="true">↓</span></a>
+          <a class="button secondary" href="https://github.com/iriabov5">GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <figure class="hero-figure" aria-labelledby="hero-diagram-title">
+        <figcaption id="hero-diagram-title" class="eyebrow"><span class="status-dot"></span> Where I focus</figcaption>
+        <div class="hero-map">
+          <div class="map-node map-entry"><span>Interface</span><strong>API contracts</strong></div>
+          <div class="map-node map-service"><span>Core</span><strong>Backend services</strong></div>
+          <div class="map-branches">
+            <div class="map-node"><span>Security</span><strong>Access policies</strong></div>
+            <div class="map-node"><span>Data</span><strong>Storage &amp; events</strong></div>
+          </div>
+        </div>
+      </figure>
+    </section>
+
+    <section id="projects" class="section wrap" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <h2 id="projects-title">Featured Projects</h2>
+        <a class="text-link section-link" href="https://github.com/iriabov5?tab=repositories">Browse repositories <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="featured">
+        <article class="project" aria-labelledby="secureshare-title">
+          <figure class="project-visual screenshot">
+            <a href="assets/secureshare-files.webp" aria-label="View the full-size SecureShare file browser screenshot">
+              <img src="assets/secureshare-files.webp" width="1440" height="1054" loading="lazy" decoding="async" alt="SecureShare file browser with upload, search, and file integrity controls">
+            </a>
+            <figcaption>File browser · Original Russian interface</figcaption>
+          </figure>
+          <div class="project-copy">
+            <p class="eyebrow">Private file storage</p>
+            <h3 id="secureshare-title">SecureShare</h3>
+            <p>Private file storage that checks ownership on every file request and encrypts content before writing it to S3-compatible storage.</p>
+            <ul class="features">
+              <li>Server-side sessions with remote session revocation.</li>
+              <li>Upload, search, and download with integrity checks.</li>
+            </ul>
+            <ul class="tags" aria-label="Technologies">
+              <li>Kotlin</li><li>Spring Boot</li><li>React</li><li>TypeScript</li><li>PostgreSQL</li><li>S3</li>
+            </ul>
+            <a class="text-link" href="https://github.com/iriabov5/secureshare" aria-label="View repository for SecureShare on GitHub">View repository <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project" aria-labelledby="okno-title">
+          <figure class="project-visual screenshot">
+            <a href="assets/okno-board.webp" aria-label="View the full-size Okno sprint board screenshot">
+              <img src="assets/okno-board.webp" width="1400" height="971" loading="lazy" decoding="async" alt="Okno Kanban board showing sprint task status, assignments, and linked releases">
+            </a>
+            <figcaption>Sprint board · Original Russian interface</figcaption>
+          </figure>
+          <div class="project-copy">
+            <p class="eyebrow">Release coordination</p>
+            <h3 id="okno-title">Okno</h3>
+            <p>Connects sprint planning and a Kanban board to release approvals and a deployment calendar. Teams can trace a task from review through rollout.</p>
+            <ul class="features">
+              <li>Checks task dependencies and flags scheduling conflicts on shared resources.</li>
+              <li>Previews which approvals must be repeated when release scope or timing changes, and records decisions in the release history.</li>
+            </ul>
+            <ul class="tags" aria-label="Technologies">
+              <li>TypeScript</li><li>NestJS</li><li>React</li><li>PostgreSQL</li>
+            </ul>
+            <a class="text-link" href="https://github.com/iriabov5/okno" aria-label="View repository for Okno on GitHub">View repository <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project" aria-labelledby="aegis-title">
+          <figure class="project-visual flow">
+            <figcaption class="eyebrow"><span class="status-dot"></span> Authorization request</figcaption>
+            <ol>
+              <li><strong>Verify identity</strong><span>JWT signature and claims</span></li>
+              <li><strong>Load trusted facts</strong><span>Project roles and document membership</span></li>
+              <li><strong>Evaluate Rego policy</strong><span>OPA returns ALLOW or DENY</span></li>
+            </ol>
+            <p class="flow-result">Persist the audit record before returning ALLOW</p>
+          </figure>
+          <div class="project-copy">
+            <p class="eyebrow">Zero Trust authorization · MVP</p>
+            <h3 id="aegis-title">AegisPolicy</h3>
+            <p>A policy decision point for document reads and updates. It derives user identity from a verified JWT and evaluates Rego policies against trusted facts from PostgreSQL.</p>
+            <ul class="features">
+              <li>Returns ALLOW or DENY with reason codes and a policy revision.</li>
+              <li>Fails closed if trusted facts, policy evaluation, or the audit write fails.</li>
+            </ul>
+            <ul class="tags" aria-label="Technologies">
+              <li>Go</li><li>OPA / Rego</li><li>PostgreSQL</li><li>JWT</li><li>OpenAPI</li>
+            </ul>
+            <a class="text-link" href="https://github.com/iriabov5/aegispolicy" aria-label="View repository for AegisPolicy on GitHub">View repository <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project" aria-labelledby="egress-title">
+          <figure class="project-visual flow">
+            <figcaption class="eyebrow"><span class="status-dot"></span> Outbound connection</figcaption>
+            <ol>
+              <li><strong>Route tool traffic</strong><span>AI agent, MCP server, or CLI</span></li>
+              <li><strong>Select the profile</strong><span>Local proxy listener</span></li>
+              <li><strong>Match host and port</strong><span>Profile rules and default action</span></li>
+            </ol>
+            <p class="flow-result">Allow or block and stream the decision</p>
+          </figure>
+          <div class="project-copy">
+            <p class="eyebrow">AI tool network access · MVP</p>
+            <h3 id="egress-title">EgressKeeper</h3>
+            <p>A desktop app that controls outbound traffic from AI agents, MCP servers, and developer tools configured to use its local HTTP/HTTPS proxy.</p>
+            <ul class="features">
+              <li>Editable profiles with host and port rules for each proxy listener.</li>
+              <li>A live decision stream shows the matching rule or the profile’s default action.</li>
+            </ul>
+            <ul class="tags" aria-label="Technologies">
+              <li>Rust</li><li>Tauri</li><li>Tokio</li><li>React</li><li>TypeScript</li>
+            </ul>
+            <a class="text-link" href="https://github.com/iriabov5/egresskeeper" aria-label="View repository for EgressKeeper on GitHub">View repository <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section wrap about" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <p>My core stack is Java and Kotlin. I work on backend services, REST APIs, and microservice architectures, with a focus on how access control and data boundaries hold up across distributed systems. My own projects also use Go for security services and Rust for desktop tooling, including network controls for AI agents.</p>
+    </section>
+
+    <section id="expertise" class="section wrap" aria-labelledby="expertise-title">
+      <h2 id="expertise-title">Technical Expertise</h2>
+      <div class="expertise-grid">
+        <article class="expertise-card core">
+          <h3>Core backend</h3>
+          <p>Java, Kotlin, Spring Boot, Micronaut</p>
+        </article>
+        <article class="expertise-card">
+          <h3>Architecture</h3>
+          <p>Microservices, REST APIs, distributed and event-driven systems, Kafka, PostgreSQL</p>
+        </article>
+        <article class="expertise-card">
+          <h3>Security</h3>
+          <p>OAuth 2.0 / OIDC, JWT, RBAC, Zero Trust, OPA / Rego, secure software design</p>
+        </article>
+        <article class="expertise-card">
+          <h3>Infrastructure</h3>
+          <p>Docker, Kubernetes, CI/CD, observability</p>
+        </article>
+        <article class="expertise-card">
+          <h3>Project work</h3>
+          <p>Go, Rust, Tauri, React, TypeScript, AI security</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap" aria-labelledby="approach-title">
+      <h2 id="approach-title">Engineering Approach</h2>
+      <div class="approach-grid">
+        <article>
+          <h3>Define trust boundaries</h3>
+          <p>Derive identity from verified credentials and resolve permissions from server-controlled data.</p>
+        </article>
+        <article>
+          <h3>Plan for failure</h3>
+          <p>Specify what happens when a dependency is unavailable. For an authorization service, make denial and audit behavior explicit.</p>
+        </article>
+        <article>
+          <h3>Make decisions traceable</h3>
+          <p>Record why an operation was accepted, blocked, or sent back for approval so it can be investigated later.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="other-projects" class="section wrap" aria-labelledby="other-title">
+      <h2 id="other-title">Other Projects</h2>
+      <div class="other-grid">
+        <article class="other-card">
+          <h3><a href="https://github.com/iriabov5/phishing-intelligence-triage">Phishing Intelligence Triage <span aria-hidden="true">↗</span></a></h3>
+          <p>Case management for suspicious messages. Extracts indicators of compromise and scores risk with heuristics, a local ML classifier, and optional AI analysis.</p>
+          <p class="tech-line">Kotlin · Micronaut · React · MongoDB · Python · FastAPI · scikit-learn</p>
+        </article>
+        <article class="other-card">
+          <h3><a href="https://github.com/iriabov5/sanctum">Sanctum <span aria-hidden="true">↗</span></a></h3>
+          <p>A secrets service with AES-256-GCM encryption, user management, bearer-token authentication, role-based access, expiration, and version history.</p>
+          <p class="tech-line">Go · PostgreSQL</p>
+        </article>
+        <article class="other-card">
+          <h3><a href="https://github.com/iriabov5/gonetward">Gonetward <span aria-hidden="true">↗</span></a></h3>
+          <p>A network detection prototype that applies IDS rules and statistical anomaly detection to synthetic events. It emits structured alerts and uses bounded queues to handle backpressure.</p>
+          <p class="tech-line">Go</p>
+        </article>
+        <article class="other-card">
+          <h3><a href="https://github.com/iriabov5/prompt-injection-firewall">Prompt Injection Firewall <span aria-hidden="true">↗</span></a></h3>
+          <p>An API that scores prompts using heuristics, custom rules, and optional AI analysis. It returns BLOCK, REVIEW, or ALLOW and exposes decision metrics.</p>
+          <p class="tech-line">Kotlin · Micronaut</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap" aria-labelledby="building-title">
+      <h2 id="building-title">Currently Building</h2>
+      <article class="building">
+        <div>
+          <p class="eyebrow"><span class="status-dot"></span> In Development</p>
+          <h3>Sentinel AI Platform</h3>
+          <p>A security event and behavior analytics project. The current Kotlin and Micronaut service validates incoming security events and returns an acceptance ID. The target architecture calls for Kafka-backed processing and behavior analysis for anomaly detection.</p>
+        </div>
+        <a class="text-link" href="https://github.com/iriabov5/sentinel-ai-platform" aria-label="View repository for Sentinel AI Platform on GitHub">View repository <span aria-hidden="true">↗</span></a>
+      </article>
+    </section>
   </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <h2>Contact</h2>
+        <p>Find my work and open-source activity on GitHub.</p>
+        <a class="button secondary" href="https://github.com/iriabov5">GitHub profile <span aria-hidden="true">↗</span></a>
+      </div>
+      <a class="text-link" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
 </body>
 </html>
